@@ -25,4 +25,22 @@ class BuildSequenceLearning {
             }
         }
     }
+
+    fun getIntegerSequenceWithSuspendFuncInside(start: Int): Sequence<Int> {
+        var x = start
+        return sequence {
+            while(true) {
+                if (x >= start + 10) return@sequence
+                /*
+                  delay(2000)
+                  This suspension function is invalid inside restricted suspending functions (i.e. sequence {...})
+
+                  Compile error is induced saying
+                  "Restricted suspending functions can only invoke member or extension suspending functions on their restricted coroutine scope"
+                 */
+                yield(x)
+                x = x.inc()
+            }
+        }
+    }
 }
