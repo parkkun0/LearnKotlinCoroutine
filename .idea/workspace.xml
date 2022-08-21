@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9cd8580-0090-4ac3-ad97-29365aa918a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/RxMergeEquivalent.kt" afterDir="false" />
-    </list>
+    <list default="true" id="d9cd8580-0090-4ac3-ad97-29365aa918a6" name="Changes" comment="Fix to use structured concurrency in a way intended" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,6 +64,42 @@
       <option name="presentableId" value="Default" />
       <updated>1661087820698</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial proeject setup">
+      <created>1661089644292</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661089644292</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Test RxMergeEquivalent using join method">
+      <created>1661089688227</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661089688227</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Test RxMergeEquivalent using structured concurrency">
+      <created>1661089906235</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661089906235</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Test result">
+      <created>1661090322106</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661090322106</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix to use structured concurrency in a way intended">
+      <created>1661090489315</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661090489315</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,5 +112,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial proeject setup" />
+    <MESSAGE value="Test RxMergeEquivalent using join method" />
+    <MESSAGE value="Test RxMergeEquivalent using structured concurrency" />
+    <MESSAGE value="Test result" />
+    <MESSAGE value="Fix to use structured concurrency in a way intended" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix to use structured concurrency in a way intended" />
   </component>
 </project>
