@@ -21,4 +21,21 @@ class RxMergeEquivalent {
             println("doneBlocking")
         }
     }
+
+    fun mergeTwoAsyncsAndRunAfterTheyAreAllDoneUsingStructuredConcurrency() {
+        runBlocking {
+            println("startBlocking")
+            launch {
+                delay(2000)
+                println("Runs first")
+            }
+            launch {
+                delay(3000)
+                println("Runs Second")
+            }
+
+            println("running after job1 and job2 are done. Job1 and Job2 are launched in parallel")
+            println("doneBlocking")
+        }
+    }
 }
