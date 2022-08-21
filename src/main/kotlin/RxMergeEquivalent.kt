@@ -33,9 +33,9 @@ class RxMergeEquivalent {
                 delay(3000)
                 println("Runs Second")
             }
-
-            println("running after job1 and job2 are done. Job1 and Job2 are launched in parallel")
             println("doneBlocking")
         }
+
+        println("running after job1 and job2 are done. Job1 and Job2 are launched in parallel")
     }
 }
