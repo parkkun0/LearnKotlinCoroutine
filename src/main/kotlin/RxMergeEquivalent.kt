@@ -24,8 +24,7 @@ class RxMergeEquivalent {
                 runFirst()
             }
             launch(Dispatchers.IO) {
-                delay(3000)
-                println("Runs Second")
+                runSecond()
             }
         }
 
