@@ -24,7 +24,14 @@ fun main() {
     println("""
         ========Result============
         Based on observation it seems that the coroutineScope just triggers every deferred asyncs right away,
-        and waits for each corresponding values to be finished and ready to be used 
+        and waits for each corresponding values to be finished and ready to be used
+        ==========================
+    """.trimIndent())
+
+    MultipleAsyncLearning().checkIfAnyAwaitCallTriggersAsyncsWithinTheScope()
+    println("""
+        ========Result============
+        Based on observation, once any await() is triggered, all asyncs were triggered regardless of existence of await call
         ==========================
     """.trimIndent())
 }
@@ -91,5 +98,15 @@ class MultipleAsyncLearning {
         delay(7000)
         println("Deferred3 ending")
         return@async 12345
+    }
+
+    fun checkIfAnyAwaitCallTriggersAsyncsWithinTheScope() {
+        runBlocking {
+            val deferred1 = getAsync1()
+            val deferred2 = getAsync2()
+            val deferred3 = getAsync3()
+            showResultForDeferredAwait(deferred1.await(), deferred2.await())
+            println("Async3 is not called with await()")
+        }
     }
 }
