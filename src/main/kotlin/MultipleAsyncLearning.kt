@@ -19,6 +19,14 @@ fun main() {
         Seems like it is using cached(completed) value
         ==========================
     """.trimIndent())
+
+    MultipleAsyncLearning().checkIfDeferredWaitsForCompletionOnItsFirstUse()
+    println("""
+        ========Result============
+        Based on observation it seems that the coroutineScope just triggers every deferred asyncs right away,
+        and waits for each corresponding values to be finished and ready to be used 
+        ==========================
+    """.trimIndent())
 }
 
 class MultipleAsyncLearning {
@@ -60,5 +68,28 @@ class MultipleAsyncLearning {
             println("Deferred1: ${deferred1.await()}")
             println("Is this piece of code run before or after both deferred are complete?")
         }
+    }
+
+    fun checkIfDeferredWaitsForCompletionOnItsFirstUse() {
+        runBlocking {
+            val deferred1 = getAsync1()
+            val deferred2 = getAsync2()
+            val deferred3 = getAsync3()
+            println("Deferred2: ${deferred2.await()}")
+            deferred3.await()
+            println("Deferred3: ${deferred3.await()}")
+            println("Is this piece of code run before or after two async declaration?")
+            showResultForDeferredAwait(deferred1.await(), deferred2.await())
+            println("Does await on already completed async trigger async again?")
+            println("Deferred1: ${deferred1.await()}")
+            println("Is this piece of code run before or after both deferred are complete?")
+        }
+    }
+
+    private fun CoroutineScope.getAsync3() = async {
+        println("Deferred3 starting")
+        delay(7000)
+        println("Deferred3 ending")
+        return@async 12345
     }
 }
